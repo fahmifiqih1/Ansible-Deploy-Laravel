@@ -1,0 +1,26 @@
+---
+
+- name: Clone a github repository
+  git:
+    repo: https://github.com/fahmifiqih1/BankSampahApps.git
+    dest: /var/www
+    clone: yes
+    update: yes
+  register: clone_result
+
+- name: Get the repository folder name
+  set_fact:
+    repo_folder: "{{ clone_result.after.split('/')[-1] }}"
+
+- name: Composer Install
+  ansible.builtin.shell: composer install
+  args:
+   chdir: "/var/www/{{ repo_folder }}"
+
+- name: Run Laravel in the background
+  ansible.builtin.shell: php artisan serve --host=0.0.0.0 --port=8000 > /dev/null 2>&1 &
+  async: 0
+  poll: 0
+  args:
+   chdir: "/var/www/{{ repo_folder }}"
+  

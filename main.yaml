@@ -1,0 +1,8 @@
+- name:  Setup laravel
+  hosts: all
+  vars:
+    - become: yes
+  
+  roles:
+    - package
+    - update-system

@@ -1,0 +1,17 @@
+---
+
+- name: Install Package
+  ansible.builtin.apt:
+    pkg:
+    - php-bcmath 
+    - php-curl 
+    - php-json 
+    - php-mbstring 
+    - php-mysql 
+    - php-tokenizer 
+    - php-xml php8.2-zip
+  state: latest
+  update_cache: yes
+  become: "{{ become }}"
+
+  

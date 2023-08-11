@@ -10,6 +10,19 @@
     update_cache: yes
   become: "{{ become }}"
 
+- name: Install pip
+  apt:
+    name: python3-pip
+    state: present
+  become: "{{ become }}"
+
+- name: Install PyMySQL
+  pip:
+    name: pymysql
+    state: present
+  become: "{{ become }}"
+
+
 - name: Install MariaDB Server
   apt:
     name: mariadb-server
@@ -52,19 +65,26 @@
 
 - name: Copy my.cnf to server
   ansible.builtin.copy:
-      src: ../templates/my.cnf
-      dest: /etc/mysql/add.my.cnf
+    src: ../templates/my.cnf
+    dest: /etc/mysql/add.my.cnf
   become: "{{ become }}"
 
 - name: Read contents of File
   ansible.builtin.slurp:
-      path: /etc/mysql/add.my.cnf
+    path: /etc/mysql/add.my.cnf
   register: my_cnf
   become: "{{ become }}"
 
 - name: Add new line from add.my.cnf to my.cnf
   ansible.builtin.lineinfile:
-      path: /etc/mysql/my.cnf
-      line: "{{ my_cnf.content | b64decode }}"
+    path: /etc/mysql/my.cnf
+    line: "{{ my_cnf.content | b64decode }}"
   notify: restarted mysql
   become: "{{ become }}"
+
+- name: Create the database
+  mysql_db:
+    name: laravel
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"

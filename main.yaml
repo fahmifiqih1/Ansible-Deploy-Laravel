@@ -8,8 +8,8 @@
   roles:
     # - update-system
     # - package
-    # - mariadb
+    - mariadb
     # - update-system
     # - site-laravel
     # - apache2
-    - letsencrypt
+    # - letsencrypt

@@ -1,17 +1,63 @@
 ---
 
-- name: Install Package
+- name: Add Ondřej's PHP repository for PHP
+  ansible.builtin.apt_repository:
+      repo: ppa:ondrej/php
+      state: present
+  become: "{{ become }}"
+
+- name: Install PHP
+  ansible.builtin.apt:
+    name:  php{{ Version }}
+    state: present
+    update_cache: yes
+    force_apt_get: yes
+  become: "{{ become }}"
+
+- name: Install Package Extention
   ansible.builtin.apt:
     pkg:
-    - php-bcmath 
-    - php-curl 
-    - php-json 
-    - php-mbstring 
-    - php-mysql 
-    - php-tokenizer 
-    - php-xml php8.2-zip
-  state: latest
-  update_cache: yes
+      - php{{ Version }}-cli 
+      - php{{ Version }}-common 
+      - php{{ Version }}-imap 
+      - php{{ Version }}-redis 
+      - php{{ Version }}-xml 
+      - php{{ Version }}-zip
+      - php{{ Version }}-mbstring
+      - php{{ Version }}-mysql
+    state: latest
+    update_cache: yes
+  become: "{{ become }}"
+
+- name: Install Redis server
+  apt:
+    name: redis-server
+    state: latest
   become: "{{ become }}"
 
   
+
+# - name: Add PHP repository for version 8.0
+#   ansible.builtin.apt_repository:
+#     repo: ppa:ondrej/php
+#   become: "{{ become }}"
+#   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == '22.04'
+
+# - name: Install PHP Packages
+#   ansible.builtin.apt:
+#     pkg:
+#      name: "{{ item }}"
+#      state: present
+#   loop: 
+#     - php8.0
+#     - php8.0-cli
+#     - php8.0-common
+#     - php8.0-json
+#     - php8.0-opcache
+#     - php8.0-mysql
+#     - php8.0-mbstring
+#     - php8.0-xml
+#     - php8.0-zip
+#     - php8.0-fpm
+#   become: "{{ become }}"
+#   when: ansible_distribution == 'ubuntu' and ansible_distribution_release == '22.04'

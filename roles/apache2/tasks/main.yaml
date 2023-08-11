@@ -4,3 +4,34 @@
   ansible.builtin.apt:
     name:  apache2
     state: latest
+  become: "{{ become }}"
+
+# - name: Create Folder
+#   ansible.builtin.file:
+#     path: /var/www/{{ Domain }}
+#     state: directory
+#   when: not ansible_facts['file_exists'] | default(false)
+#   become: "{{ become }}"
+
+- name: Copy Configuration apache2.conf
+  ansible.builtin.template:
+    src:  ../templates/apache2.conf.j2
+    dest: /etc/apache2/sites-available/{{ Domain }}.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart Apache
+  when: not ansible_facts['file_exists'] | default(false)
+  become: "{{ become }}"
+
+- name: Create symlink
+  ansible.builtin.file:
+    src: /etc/apache2/sites-available/{{ Domain }}.conf
+    dest: /etc/apache2/sites-enabled/{{ Domain }}.conf
+    state: link
+  notify: Restart Apache
+  become: "{{ become }}"
+
+- name: Disable default
+  ansible.builtin.shell: a2dissite 000-default.conf
+  become: "{{ become }}"

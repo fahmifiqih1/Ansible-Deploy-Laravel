@@ -2,7 +2,14 @@
   hosts: all
   vars:
     - become: yes
+  vars_files:
+    - vars/main.yaml
   
   roles:
-    - package
-    - update-system
+    # - update-system
+    # - package
+    # - mariadb
+    # - update-system
+    # - site-laravel
+    # - apache2
+    - letsencrypt

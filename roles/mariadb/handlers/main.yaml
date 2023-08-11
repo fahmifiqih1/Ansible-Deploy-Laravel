@@ -1,0 +1,14 @@
+---
+
+## at this step restarted mysql
+- name: restarted mysql
+  ansible.builtin.service:
+    name: mysql
+    state: restarted
+  become: "{{ become }}"
+
+- name: started mariadb
+  ansible.builtin.service: 
+    name: mysql
+    state: started
+  become: "{{ become }}"

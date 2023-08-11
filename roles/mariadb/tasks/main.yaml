@@ -1,0 +1,70 @@
+---
+
+## Installation package MariaDB to server
+## at step install software properties,
+## Install MariaDB Server and start service
+- name: Install Software Properties
+  apt: 
+    name: software-properties-common
+    state: present
+    update_cache: yes
+  become: "{{ become }}"
+
+- name: Install MariaDB Server
+  apt:
+    name: mariadb-server
+    state: present
+    force: yes
+    update_cache: yes
+  become: "{{ become }}"
+  notify: started mariadb
+
+- name: Install MariaDB Client
+  apt:
+    name: mariadb-client
+    state: present
+    update_cache: yes
+  become: "{{ become }}"
+  
+## This secure_installtion mysql
+## Will get a prompt from the secure_installtion mysql system
+- name: Run mysql_secure_installation
+  shell: |
+    mysql_secure_installation <<EOF
+
+      n
+      Y
+      {{ mysql_root_password }}
+      {{ mysql_root_password }}
+      Y
+      n
+      Y
+      Y
+      EOF
+    args:
+      executable: /bin/bash
+  register: secure_output
+  become: "{{ become }}"
+
+- name: show debug
+  ansible.builtin.debug:
+     msg: "Secure installtion {{ secure_output }}"
+
+- name: Copy my.cnf to server
+  ansible.builtin.copy:
+      src: ../templates/my.cnf
+      dest: /etc/mysql/add.my.cnf
+  become: "{{ become }}"
+
+- name: Read contents of File
+  ansible.builtin.slurp:
+      path: /etc/mysql/add.my.cnf
+  register: my_cnf
+  become: "{{ become }}"
+
+- name: Add new line from add.my.cnf to my.cnf
+  ansible.builtin.lineinfile:
+      path: /etc/mysql/my.cnf
+      line: "{{ my_cnf.content | b64decode }}"
+  notify: restarted mysql
+  become: "{{ become }}"

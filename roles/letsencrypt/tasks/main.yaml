@@ -1,0 +1,30 @@
+---
+
+- name: Install Certbot
+  ansible.builtin.apt:
+    name:
+      - certbot
+      - python3-certbot-apache
+    state: latest
+    update_cache: true
+  become: "{{ become }}"
+
+- name: Check if the folder exists
+  stat:
+    path: /etc/letsencrypt/live/{{ Domain }}
+  register: folder_stat
+  become: "{{ become }}"
+    
+- name: Obtain SSL certificate
+  ansible.builtin.shell: certbot --apache --agree-tos --redirect --email {{ Email }} -d {{ Domain }}
+  become: "{{ become }}"
+  when: not folder_stat.stat.exists
+
+- name: Configure cerbot autorenewal
+  shell: certbot renew --dry-run
+  become: "{{ become }}"
+  register: result_renewal
+
+- name: Show output renewal SSL
+  ansible.builtin.debug:
+    msg: "{{ result_renewal }}"

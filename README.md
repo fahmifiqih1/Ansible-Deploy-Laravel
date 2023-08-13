@@ -1,1 +1,5 @@
-# Ansible-Deploy-Laravel
+# Deploy Laravel With Ansible
+
+## Pre-Requisite
+## Deficiency
+## How to

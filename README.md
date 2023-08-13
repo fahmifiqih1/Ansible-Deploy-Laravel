@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/cac7a7d5-56c5-4eea-87a7-06b3b7a45710)"  width="200" height="200"/>
+  <img src="https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/cac7a7d5-56c5-4eea-87a7-06b3b7a45710)"  width="150" height="150"/>
+  <img src="https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/0f344d82-42a9-4123-9fd0-efba2bfff107)"  width="150" height="150"/>
 </p>
 <p align="center">
   <a href="https://join.slack.com/t/prowler-workspace/shared_invite/zt-1hix76xsl-2uq222JIXrC7Q8It~9ZNog"><img alt="Slack Shield" src="https://img.shields.io/badge/slack-prowler-brightgreen.svg?logo=slack"></a>

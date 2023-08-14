@@ -16,4 +16,8 @@
 | Ansible Engine | https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html |
 
 ## Deficiency
+
+* Each repository is public, does not use Password and Username
+*
+
 ## How to

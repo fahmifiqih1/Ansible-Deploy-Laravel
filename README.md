@@ -18,6 +18,5 @@
 ## Deficiency
 
 * Each repository is public, does not use Password and Username
-*
 
 ## How to

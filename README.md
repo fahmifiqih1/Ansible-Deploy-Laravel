@@ -22,11 +22,11 @@
 
 ## How To Setup
 
-🔧 Git Clone
+🔧  Git Clone
 
 Clone this Repository on your local mechine ```git clone https://github.com/fahmifiqih1/Ansible-Deploy-Laravel.git``` | ```cd Ansible-Deploy-Laravel```
 
-⚙ Change Setting
+⚙  Change Setting
 
 
 

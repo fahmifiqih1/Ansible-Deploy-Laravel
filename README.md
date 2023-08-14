@@ -12,7 +12,7 @@
 
 | Name | Values |
 |---|---|
-| VPS min | 1 vCpu 1 GiB |
+| Server VPS | 1 vCpu 1 GiB |
 | Ansible Engine | https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html |
 
 ## Deficiency

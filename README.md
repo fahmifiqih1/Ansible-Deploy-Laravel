@@ -2,21 +2,12 @@
   <img src="https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/cac7a7d5-56c5-4eea-87a7-06b3b7a45710)"  width="150" height="150"/>
   <img src="https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/0f344d82-42a9-4123-9fd0-efba2bfff107)"  width="150" height="150"/>
 </p>
-<p align="center">
-  <a href="https://join.slack.com/t/prowler-workspace/shared_invite/zt-1hix76xsl-2uq222JIXrC7Q8It~9ZNog"><img alt="Slack Shield" src="https://img.shields.io/badge/slack-prowler-brightgreen.svg?logo=slack"></a>
-  <a href="https://pypi.org/project/prowler/"><img alt="Python Version" src="https://img.shields.io/pypi/v/prowler.svg"></a>
-  <a href="https://pypi.python.org/pypi/prowler/"><img alt="Python Version" src="https://img.shields.io/pypi/pyversions/prowler.svg"></a>
-  <a href="https://pypistats.org/packages/prowler"><img alt="PyPI Prowler Downloads" src="https://img.shields.io/pypi/dw/prowler.svg?label=prowler%20downloads"></a>
-  <a href="https://pypistats.org/packages/prowler-cloud"><img alt="PyPI Prowler-Cloud Downloads" src="https://img.shields.io/pypi/dw/prowler-cloud.svg?label=prowler-cloud%20downloads"></a>
-  <a href="https://hub.docker.com/r/toniblyx/prowler"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/toniblyx/prowler"></a>
-  <a href="https://hub.docker.com/r/toniblyx/prowler"><img alt="Docker" src="https://img.shields.io/docker/cloud/build/toniblyx/prowler"></a>
-  <a href="https://hub.docker.com/r/toniblyx/prowler"><img alt="Docker" src="https://img.shields.io/docker/image-size/toniblyx/prowler"></a>
-  <a href="https://gallery.ecr.aws/prowler-cloud/prowler"><img width="120" height=19" alt="AWS ECR Gallery" src="https://user-images.githubusercontent.com/3985464/151531396-b6535a68-c907-44eb-95a1-a09508178616.png"></a>
-</p>
 
-`Prowler` is an Open Source security tool to perform AWS, GCP and Azure security best practices assessments, audits, incident response, continuous monitoring, hardening and forensics readiness.
+`Laravel` Laravel is a popular open-source PHP web application framework used for building web applications and APIs. It follows the Model-View-Controller (MVC) architectural pattern and provides a set of tools and features that make web development more efficient and organized.
 
-It contains hundreds of controls covering CIS, NIST 800, NIST CSF, CISA, RBI, FedRAMP, PCI-DSS, GDPR, HIPAA, FFIEC, SOC2, GXP, AWS Well-Architected Framework Security Pillar, AWS Foundational Technical Review (FTR), ENS (Spanish National Security Scheme) and your custom security frameworks.
+`Ansible` Ansible is an open-source automation tool that simplifies the process of configuration management, application deployment, and task automation. It allows you to define and manage your infrastructure as code, making it easier to provision, configure, and maintain servers and other IT resources, I'll try to implement with Ansible.
+
+
 
 ## Pre-Requisite
 

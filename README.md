@@ -20,7 +20,7 @@
 
 * Each repository is public, does not use Password and Username
 
-## How to
+## How To Setup
 
 🔧 Git Clone
 

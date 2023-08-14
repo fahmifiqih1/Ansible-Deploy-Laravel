@@ -14,9 +14,21 @@
 |---|---|
 | Server VPS | 1 vCpu 1 GiB |
 | Ansible Engine | https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html |
+| SCM | Git |
 
 ## Deficiency
 
 * Each repository is public, does not use Password and Username
 
 ## How to
+
+🔧 Git Clone
+
+Clone this Repository on your local mechine ```git clone https://github.com/fahmifiqih1/Ansible-Deploy-Laravel.git``` | ```cd Ansible-Deploy-Laravel```
+
+⚙ Change Setting
+
+
+
+
+

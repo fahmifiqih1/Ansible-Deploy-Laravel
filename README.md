@@ -8,15 +8,12 @@
 `Ansible` Ansible is an open-source automation tool that simplifies the process of configuration management, application deployment, and task automation. It allows you to define and manage your infrastructure as code, making it easier to provision, configure, and maintain servers and other IT resources, I'll try to implement with Ansible.
 
 
-
 ## Pre-Requisite
 
-| Provider | Checks |
+| Name | Values |
 |---|---|
-| AWS | 287 |
-| GCP | 73 |
-| Azure | 23 |
-| Kubernetes | Planned |
+| VPS min | 1 vCpu 1 GiB |
+| Ansible Engine | https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html |
 
 ## Deficiency
 ## How to

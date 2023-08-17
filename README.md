@@ -48,11 +48,13 @@ $ Change key Repo, Domain, Version and Email, with what you have.
 ![Screen Shot 2023-08-17 at 16 12 55](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/3ce6109a-05ab-419e-b3cd-fa57e9e9e740)
 
 
-3. 
+3. Before starting don't forget to replace .env with your own.
+
 ```
-$ 
-$ 
+$ To change the .env you can ~/ansible-laravel/roles/site-laravel/templates
 ```
+![Screen Shot 2023-08-17 at 16 20 46](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/11687dce-c927-4558-8d80-152cd799559e)
+
 4. 
 ```
 $ 

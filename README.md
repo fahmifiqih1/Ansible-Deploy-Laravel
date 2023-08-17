@@ -26,7 +26,7 @@
 |---|
 | package php, etc |
 | Mariadb |
-| Install Repository |
+| Config Your App |
 | Apache2 |
 | Letsencrypt |
 

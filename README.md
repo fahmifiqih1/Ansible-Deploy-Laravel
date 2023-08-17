@@ -29,22 +29,24 @@ Clone this Repository on your local Mechine ```git clone https://github.com/fahm
 ⚙  Change Setting
 
 1. Prepare ansible.cfg file, host and key like key.pem or id_rsa.
-
-![Screen Shot 2023-08-17 at 16 03 15](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/a00d32a0-d56f-462c-b577-2a3e1fcb8ad2)
-
+   
 ```
 $ Adjust the config with the existing one, starting from inventory, private_file_file.
 ```
-![Screen Shot 2023-08-17 at 16 03 33](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/8f75744c-f310-42a6-95bb-cfd7587806a9)
+![Screen Shot 2023-08-17 at 16 03 15](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/a00d32a0-d56f-462c-b577-2a3e1fcb8ad2)
+
 ```
 $ Enter your target server's hostname and customize your server user, but usually it defaults to ubuntu user.
 ```
+![Screen Shot 2023-08-17 at 16 03 33](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/8f75744c-f310-42a6-95bb-cfd7587806a9)
+
 2. Then set up additional configurations.
 
-![Screen Shot 2023-08-17 at 16 12 55](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/3ce6109a-05ab-419e-b3cd-fa57e9e9e740)
 ```
 $ Change key Repo, Domain, Version and Email, with what you have.
 ```
+![Screen Shot 2023-08-17 at 16 12 55](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/3ce6109a-05ab-419e-b3cd-fa57e9e9e740)
+
 
 3. 
 ```

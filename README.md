@@ -78,5 +78,6 @@ you can hide the credential database if you want, it can use "ansible-vault"
 
 5. Done Configure
 ```
-When everything is ready, you can execute commands to auto-configure with Ansible. you can run the "ansible-playbook main.yaml" command
+When everything is ready, you can execute commands to auto-configure with Ansible. you can run the
+"ansible-playbook main.yaml" command
 ```

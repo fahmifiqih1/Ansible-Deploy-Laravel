@@ -55,7 +55,7 @@ Enter your target server's hostname and customize your server user, but usually 
 ```
 Change key Repo, Domain, Version and Email, with what you have.
 ```
-![Screen Shot 2023-08-17 at 16 12 55](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/3ce6109a-05ab-419e-b3cd-fa57e9e9e740)
+![Screen Shot 2023-08-18 at 13 15 11](https://github.com/fahmifiqih1/Ansible-Deploy-Laravel/assets/53596721/12c85227-019d-4bf9-9179-a56ef0ef6ced)
 
 
 3. Before starting don't forget to replace .env with your own.

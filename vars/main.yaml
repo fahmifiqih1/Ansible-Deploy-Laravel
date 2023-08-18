@@ -1,8 +1,8 @@
 # Name folder lowercase
 Repo: https://github.com/fahmifiqih1/example-app-laravel-deploy.git
 # Your Domain
-Domain: ansible.meteor.asia
+Domain: exmple.com
 # Verison PHP
 Version: 8.0
 # Your Mail
-Email: fahmi.fiqih@meteor.id
+Email: fahmi.fiqih@example.com

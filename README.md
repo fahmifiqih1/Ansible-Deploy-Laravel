@@ -41,7 +41,7 @@ Clone this Repository on your local Mechine ```git clone https://github.com/fahm
 1. Prepare ansible.cfg file, host and key like key.pem or id_rsa.
    
 ```
-Adjust the config with the existing one, starting from inventory, private_file_file.
+Adjust the config with the existing one, starting from inventory, private_key_file.
 ```
 ![Screen Shot 2023-08-17 at 16 03 15](https://github.com/fahmifiqih1/Ansible-Webserver/assets/53596721/a00d32a0-d56f-462c-b577-2a3e1fcb8ad2)
 
